@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useMemo, Fragment } from 'react';
 import { m, AnimatePresence } from 'framer-motion';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { ArrowLeft, LayoutDashboard, PenTool, Bot, Book, LogIn, LogOut, BrainCircuit, Trophy, Loader2, X, PlayCircle, Timer, Sun, Moon, Monitor, Volume2, VolumeX, Maximize, Minimize, Calculator, Menu, RadioTower } from 'lucide-react';
 import { useCatStore } from './catStore';
 import { paperLoaders } from '../data/cat_db';
@@ -429,7 +429,6 @@ const ActivationModal = ({ isOpen, onClose, onActivate, error }: { isOpen: boole
 };
 
 export default function CatMaester() {
-  const navigate = useNavigate();
   const location = useLocation();
   const [activeTab, setActiveTab] = useState('dashboard');
   const [isAuthOpen, setIsAuthOpen] = useState(false);
